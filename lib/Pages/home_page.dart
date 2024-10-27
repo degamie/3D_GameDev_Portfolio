@@ -32,6 +32,13 @@ class HomePage extends State<HomePage> {
             const Spacer(),
             for(int i=0;i<5;i++)
             TextButton(onPressed: (){}, child: const Text("Button"))
+            Text("DG",style: Text(
+              fontSize:23,
+              FontWeight:FontWeight.bold,
+              decoration:TextDecoration.underline,
+              color:customColor.purpleCombined
+
+            ))
             Padding:const EdgeInsets.only(right:20),
           ],
           )

@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:threed_gamedev_website/styles/Style.dart';
 
 class HomePage extends State<HomePage> {
   @override
@@ -12,14 +13,14 @@ class HomePage extends State<HomePage> {
           children: [
         //Main
         Container(
-          margin:EdgeInsets.symmetric(
+          margin:const EdgeInsets.symmetric(
             vertical:10.0,
             horizontal: 20.0,
           )
           height: 500,
           width: double.maxFinite,
           color: Colors.purple,
-        decoration: BoxDecoration(
+          decoration: BoxDecoration(
           gradient: LinearGradient(colors:[Colors.transparent,CustomColor.bgLight1,],
           
 
@@ -40,6 +41,8 @@ class HomePage extends State<HomePage> {
 
             ))
             Padding:const EdgeInsets.only(right:20),
+            decoration:KHederDecoration;
+            const SizedBox(width:15.10);
           ],
           )
         )

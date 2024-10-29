@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:threed_gamedev_website/styles/Style.dart';
 
 class HomePage extends State<HomePage> {
   @override

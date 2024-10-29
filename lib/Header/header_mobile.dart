@@ -1,21 +1,20 @@
 import 'package:flutter/material.dart';
 import 'package:threed_gamedev_website/styles/Style.dart';
-class HeaderDesktop extends StatefulWidget {
-  const HeaderDesktop({super.key});
+
+class HeaderMobile extends StatefulWidget {
+  const HeaderMobile({super.key});
 
   @override
-  State<HeaderDesktop> createState() => _HeaderDesktop();
+  State<HeaderMobile> createState() => _HeaderMobile();
 }
 
-
-
-class _HeaderDesktop extends State<HeaderDesktop> {
+class _HeaderMobile extends State<HeaderMobile> {
   @override
   Widget build(BuildContext context) {
     return Container(
       height: 50.0,
       margin: const EdgeInsets.fromLTRB(40,5,5,20),
-      decoration:KHeaderDecoration(),
+      decoration: KHederDecoration,
       child:Row(
         children: [
           SiteLogger.onTap(),
@@ -30,5 +29,3 @@ class _HeaderDesktop extends State<HeaderDesktop> {
     // return const Placeholder();
   }
 }
-
-

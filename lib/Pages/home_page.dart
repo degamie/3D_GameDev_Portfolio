@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 
 class HomePage extends StatefulWidget {
+  final keyScaffold=GlobalKey<ScaffoldState>();
+  key:keyScaffold();
   const HomePage({super.key});
 
   @override
@@ -9,6 +11,7 @@ class HomePage extends StatefulWidget {
 
 class HomePage extends State<HomePage> {
   const HomePage({super.key});
+  endDrawer:Drawer();
   // const MyWidget({super.key});
   Widget build(BuildContext context) {
     return Scaffold(

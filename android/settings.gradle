@@ -5,6 +5,11 @@ pluginManagement {
         def flutterSdkPath = properties.getProperty("flutter.sdk")
         assert flutterSdkPath != null, "flutter.sdk not set in local.properties"
         return flutterSdkPath
+        repositories {
+            gradlePluginPortal()
+            google()
+            mavenCentral()
+        }
     }()
 
     includeBuild("$flutterSdkPath/packages/flutter_tools/gradle")

@@ -1,15 +1,13 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
-  const HomePage({super.key});
-
-  @override
-  State<HomePage> createState() => _HomePage();
-}
 
 class HomePage extends State<HomePage> {
-  const HomePage({super.key});
-  // const MyWidget({super.key});
+  @override
+  State<HomePage> createState() => _HomePage();
+
+}
+class HomePage extends StatefulWidget{
+  const HomePage({super.Key});
   Widget build(BuildContext context) {
     return Scaffold(
         body: ListView(
@@ -25,8 +23,7 @@ class HomePage extends State<HomePage> {
     ));
   }
 }
-
-
+// const MyWidget({super.key});
   // @override
   // Widget build(BuildContext context) {
   //   return const Placeholder();

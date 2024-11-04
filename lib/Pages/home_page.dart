@@ -1,23 +1,36 @@
 import 'package:flutter/material.dart';
 
-class HomePage extends StatefulWidget {
+class _HomePageState extends State<HomePage> {
   final keyScaffold=GlobalKey<ScaffoldState>();
+  @override
   key:keyScaffold();
-  const HomePage({super.key});
+  const HomePageState({super.key});
 
   @override
   State<HomePage> createState() => _HomePage();
 }
 
-class HomePage extends State<HomePage> {
-  const HomePage({super.key});
-  endDrawer:Drawer();
+
+  class HomePage extends StatefulWidget {
+    const HomePage({super.key});
+     endDrawer:Drawer();
   // const MyWidget({super.key});
   Widget build(BuildContext context) {
     return Scaffold(
-        body: ListView(
+      body: ListView(
       scrollDirection: Axis.vertical,
-      children: [
+       children: [
+      child:ListView(
+      
+     
+        for(i<=navIcons.Length;i++){
+          ListTile(){
+            leaading:Icon(icon);
+          }
+
+        }
+             ]),
+  
         //Main
         Container(
           height: 500,
@@ -25,22 +38,7 @@ class HomePage extends State<HomePage> {
           color: Colors.purple,
         )
       ],
-    ));
+    ))
+    );
   }
 }
-
-
-  // @override
-  // Widget build(BuildContext context) {
-  //   return const Placeholder();
-  // }
-
-// class HomePage extends StatefulWidget {
-
-
-//   @override
-//   State<StatefulWidget> createState() {
-//     // TODO: implement createState
-//     throw UnimplementedError();
-//   }
-// }

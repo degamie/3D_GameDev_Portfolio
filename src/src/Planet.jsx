@@ -1,4 +1,4 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 
 const Planet({isRotating ,setIsRotating,...obj})=>{
    const isPlanetRef=useRef();
@@ -6,13 +6,21 @@ const Planet({isRotating ,setIsRotating,...obj})=>{
    const nodes,materials=useGLTF(isPlanetScene);
    const lastX=useRef(0);
    const dumpingSpeed=.95;
-
+};
    const handlingPtUp=(e)=>{
     e.stopPropogation();
     e.PreventDefault();
     setIsRotating(false);
-
+   }
    const handlingPt=(e)=>{
+      useEffect () =>{
+        document.removeEventListener("handlePtrUp]"); document.removeEventListener("handlePtrDown");document.removeEventListener("handlePtrMove");} 
+      
+      return () =>{
+        document.removeEventListener("PointerUp");
+        document.removeEventListener("PointerDown");
+        document.removeEventListener("PointerMove");
+      }
     e.stopPropogation();
     e.PreventDefault();
     setIsRotating(true);
@@ -23,5 +31,3 @@ const Planet({isRotating ,setIsRotating,...obj})=>{
     isPlanetRef.current.rotating+=delta*.95;
     lastX.current*Math.PI.clientX;
    }
-}
-}

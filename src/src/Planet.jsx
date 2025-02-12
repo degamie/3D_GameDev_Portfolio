@@ -1,20 +1,41 @@
 import { useEffect, useRef } from "react"
 
 const Planet({isRotating ,setIsRotating,...obj})=>{
-   const isPlanetRef=useRef();
-   const gl,viewPort=useThree();
-   const nodes,materials=useGLTF(isPlanetScene);
-   const lastX=useRef(0);
-   const dumpingSpeed=.95;
-};
-   const handlingPtUp=(e)=>{
-    e.stopPropogation();
-    e.PreventDefault();
+  var lastX=useRef(0);
+  var lastY=useRef(0);
+  const dumpingSpeed=.95;
+  const isPlanetRef=useRef();
+  const gl,viewPort=useThree();
+  const nodes,materials=useGLTF(isPlanetScene);
+const handleKeyUP=(e)=>{
+  if(e.Key==='ArrowLeft' || e.Key==='ArrowRight'){
     setIsRotating(false);
-   }
+  }
+}
+const handlingPtUp=(e)=>{
+  e.stopPropogation();
+  e.PreventDefault();
+  setIsRotating(false);
+ }
+
+  UseFrame=()=>{
+    if(isRotating){
+      rotationSpeed.current=dampingFactor;
+    }
+    if(Math.abs(rotationSpeed.current<.001)){
+      rotationSpeed.current;
+    }
+    else{
+      const rotationxSpeed=isPlanetRef.current.rotation.x;
+      const rotationySpeed=isPlanetRef.current.rotation.y;
+    }
+  }
+
    const handlingPt=(e)=>{
       useEffect () =>{
-        document.removeEventListener("handlePtrUp]"); document.removeEventListener("handlePtrDown");document.removeEventListener("handlePtrMove");} 
+        document.addEventListener("handleKeyUP");
+
+        document.addEventListener("handlePtrUp]"); document.addEventListener("handlePtrDown");document.addEventListener("handlePtrMove");} 
       
       return () =>{
         document.removeEventListener("PointerUp");
@@ -31,3 +52,4 @@ const Planet({isRotating ,setIsRotating,...obj})=>{
     isPlanetRef.current.rotating+=delta*.95;
     lastX.current*Math.PI.clientX;
    }
+  };

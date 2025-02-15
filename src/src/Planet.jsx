@@ -7,18 +7,10 @@ const Planet({isRotating ,setIsRotating,...obj})=>{
   const isPlanetRef=useRef();
   const gl,viewPort=useThree();
   const nodes,materials=useGLTF(isPlanetScene);
-const handleKeyUP=(e)=>{
-  if(e.Key==='ArrowLeft' || e.Key==='ArrowRight'){
-    setIsRotating(false);
-  }
-}
-const handlingPtUp=(e)=>{
-  e.stopPropogation();
-  e.PreventDefault();
-  setIsRotating(false);
- }
-
+  //Implemnenting
+  
   UseFrame=()=>{
+    isPlanetRef.current.rotation.y+=rotationSpeed.current;
     if(isRotating){
       rotationSpeed.current=dampingFactor;
     }
@@ -30,18 +22,34 @@ const handlingPtUp=(e)=>{
       const rotationySpeed=isPlanetRef.current.rotation.y;
     }
   }
+  const handlingPt=(e)=>{
+    useEffect () =>{
+      const Canvas=gl.domElement;
+      document.addEventListener("handleKeyUP");
 
-   const handlingPt=(e)=>{
-      useEffect () =>{
-        document.addEventListener("handleKeyUP");
+      document.addEventListener("handlePtrUp]"); document.addEventListener("handlePtrDown");document.addEventListener("handlePtrMove");} 
+    
+    return () =>{
+      document.removeEventListener("PointerUp");
+      document.removeEventListener("PointerDown");
+      document.removeEventListener("PointerMove");
+    }
+  // const useEffect(() => {
+  
+  // }, [input])
+const handleKeyUP=(e)=>{
+  if(e.Key==='ArrowLeft' || e.Key==='ArrowRight'){
+    setIsRotating(false);
+  }
+}
+const handlingPtUp=(e)=>{
+  e.stopPropogation();
+  e.PreventDefault();
+  setIsRotating(false);
+ }
 
-        document.addEventListener("handlePtrUp]"); document.addEventListener("handlePtrDown");document.addEventListener("handlePtrMove");} 
-      
-      return () =>{
-        document.removeEventListener("PointerUp");
-        document.removeEventListener("PointerDown");
-        document.removeEventListener("PointerMove");
-      }
+
+
     e.stopPropogation();
     e.PreventDefault();
     setIsRotating(true);

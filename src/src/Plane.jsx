@@ -1,10 +1,16 @@
-import {useRef} from 'react'
+import {useEffect, useRef} from 'react'
 // import React from 'react'
 
 const Plane({isRotating,..props}) {
   const ref=React.useRef;
   const {actions}=useAnimations(Animation,ref);
+  useEffect(()=>{
+    if(isRotating)actions['Take 001'].play();
+    else actions['Take 001'].stop();
+    console.log({isRotating});
+  })
   return (
+  
     <mesh {..props} ref={ref}></mesh>
     <div>Plane</div>
   )

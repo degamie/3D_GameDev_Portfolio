@@ -1,6 +1,10 @@
-import React, { Suspense } from 'react'
+import React, { Suspense, useState } from 'react'
 
 function Home() {
+  Plane=()=>{
+    const [currentStage,setCurrentStage]=useState(1);
+    setCurrentStage={setCurrentStage};
+  }
   return (    
     <Plane planeScale={planeScale,planePosition}rotation={0,20,0}></Plane>
  

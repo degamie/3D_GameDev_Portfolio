@@ -1,6 +1,8 @@
 import { useEffect, useRef } from "react"
 
-const Planet({isRotating ,setIsRotating,...obj})=>{
+const Planet({isRotating ,setIsRotating,...obj})=>{//Planet Constructor Declare
+  const {scene,animations}=useGLTF(isPlanetScene);//SceneAnimation
+  const PlanetRef=useRef();//PlanetRef Declare
   var lastX=useRef(0);
   var lastY=useRef(0);
   const dumpingSpeed=.95;
@@ -30,6 +32,7 @@ const Planet({isRotating ,setIsRotating,...obj})=>{
       document.addEventListener("handlePtrUp]"); document.addEventListener("handlePtrDown");document.addEventListener("handlePtrMove");} 
     
     return () =>{
+      <meshRef={PlanetRef};
       document.removeEventListener("PointerUp");
       document.removeEventListener("PointerDown");
       document.removeEventListener("PointerMove");

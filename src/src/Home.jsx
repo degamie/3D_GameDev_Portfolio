@@ -1,31 +1,36 @@
-import React, { Suspense, useState } from 'react'
+// import React, { Suspense, useState } from 'react'
 
-function Home() {
-  Plane=()=>{
-    const [currentStage,setCurrentStage]=useState(1);
-    setCurrentStage={setCurrentStage};
-  }
-  return (    
-    <Plane planeScale={planeScale,planePosition}rotation={0,20,0}></Plane>
- 
-    function AdjustPlaneForScreen(){
-      let screenScale=0;let screenPos=0;
-        if(window.ForScreenSize()){
-          screenScale=[1.5,1.5,1.5];
-          screenPos=[0,-1.5,0];
+import HomeInfo from "./assets/3d/PLANE.glb/HomeInfo";
+return (    
+  <Plane planeScale={planeScale,planePosition}rotation={0,20,0}></Plane>
+  <div>{currentStage===1 && <HomeInfo currentStage=currentStage}/></div>
+
+)
+
+// function Home() {
+//   Plane=()=>{
+//     const [currentStage,setCurrentStage]=useState(1);
+//     setCurrentStage={setCurrentStage};
+//   }
+
+//     function AdjustPlaneForScreen(){
+//       let screenScale=0;let screenPos=0;
+//         if(window.ForScreenSize()){
+//           screenScale=[1.5,1.5,1.5];
+//           screenPos=[0,-1.5,0];
           
-        }
-        else {
-          screenScale=[3,3,3];
-          screenPos=[0,-2.4,2.4];
-        }console.log(screenPos,rot);
-    }
-    <><Suspense fallBack> {{ Loader }}</Suspense><hemisphereLight></hemisphereLight></>
-  )
-    // <div>Home</div>
-    // <section className="w-full h-screen relative">  </section>
-    // <canvas className={'w-full h-screen bg-transparent}>camera={{near:.1,far:1000} ${isRotating ?cursor-grabbing,cursor,-grab'}></canvas>
-    // <canvas>camera={{near:.1,far:1000}}</canvas>
+//         }
+//         else {
+//           screenScale=[3,3,3];
+//           screenPos=[0,-2.4,2.4];
+//         }console.log(screenPos,rot);
+//     }
+//     <><Suspense fallBack> {{ Loader }}</Suspense><hemisphereLight></hemisphereLight></>
+//   )
+//     // <div>Home</div>
+//     // <section className="w-full h-screen relative">  </section>
+//     // <canvas className={'w-full h-screen bg-transparent}>camera={{near:.1,far:1000} ${isRotating ?cursor-grabbing,cursor,-grab'}></canvas>
+//     // <canvas>camera={{near:.1,far:1000}}</canvas>
 
-}
-export default Home
+// }
+// export default Home

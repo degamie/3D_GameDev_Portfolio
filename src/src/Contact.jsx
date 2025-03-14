@@ -9,7 +9,19 @@ function Contact() {
 
   const isLoading=()=>{}; 
 
-  const handleSubmit=[handleSubmit];
+  const handleSubmit= (e)={
+    [handleSubmit]
+    e.preventDefault();
+    emailjs.sendForm(
+      import.meta.enter.VITE_APP_EMAILJS_SERVICE_ID;
+      import.meta.enter.VITE_APP_EMAILJS_TEMPLATE_ID;
+      from_name:form_name;
+      to_name:'Sarthak Mittal';
+      from_email:form_email;
+      to_email:'Degamiesign@gmail.com';
+      from.message:form_message;
+    )
+  }
 
   const HandleChange=(e)=>{//HandleChange Funct Declare
     setForm('...form,[e.target.name]:e.targetValue',useState(false));//Initializng SetForm 

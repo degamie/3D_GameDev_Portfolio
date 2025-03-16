@@ -3,7 +3,7 @@ import actions from 'three/*';
 import { GLTFLoader } from 'three/examples/jsm/Addons.js';
 function Models() {//Models funct declare 
   const Loader=new GLTFLoader;//GLTF Loader Constant Declare
-  Loader.load('path/house.glb',(gltf));//Model Loading
+  Loader.load('Home/3d_Game_Dev_portfolio/Home.glb',(gltf));//Model Loading
     scene.add(gltf.scene);//inserting Model Scene
     undefined.function(){console.error(error);}// Exceptional error Function Defining
 

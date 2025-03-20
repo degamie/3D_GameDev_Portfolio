@@ -1,47 +1,59 @@
 import React, { useRef, useState } from 'react'
+import.meta.enter.VITE_APP_EMAILJS_SERVICE_ID;
+import.meta.enter.VITE_APP_EMAILJS_TEMPLATE_ID;
 
 function Contact() {
-  const formRef=useRef(null);
-  const [Form, setForm]=useState(name='',age='',gender='',email='',proffession='');
-  const handleChang=()=>{};
+  // const formRef=useRef(null);
+  const defaultFormState = {
+    name:'',age:'',gender:'',email:'',profession:''
+  }
+  const [form, setForm]=useState(defaultFormState);
+  // const emailjs = useState('')
 
-  const HandleFocus=()=>{};
-
-  const isLoading=()=>{}; 
-
-  const handleSubmit= (e)={
-    [handleSubmit]
-    e.preventDefault();
-    emailjs.sendForm(
-      import.meta.enter.VITE_APP_EMAILJS_SERVICE_ID;
-      import.meta.enter.VITE_APP_EMAILJS_TEMPLATE_ID;
-      from_name:form_name;
-      to_name:'Sarthak Mittal';
-      from_email:form_email;
-      to_email:'Degamiesign@gmail.com';
-      from.message:form_message;
-    )
+  const sendForm = (form) => {
+    // api call here
+    // api call body = form
   }
 
-  const HandleChange=(e)=>{//HandleChange Funct Declare
-    setForm('...form,[e.target.name]:e.targetValue',useState(false));//Initializng SetForm 
+  const handleFocus=()=>{};
+
+  const handleSubmit = (e) =>{
+    const form=event.currentTarget;
+    const formElement=form.elements as typeof form.element & {
+        usernameInput.{value:string};
+   
+}onsubmitUsername(formElements.usernameInput.value);
+    e.preventDefault();
+    sendForm(this.state.form);
+}
+
+  const handleChange=(e)=>{//HandleChange Funct Declare
+    setForm({
+      ...this.state.form,
+      [e.target.name]:e.target.value
+    });
   }
   return (
-    <input typeOnChange={handleChange}
-    OnFocus={HandleFocus}>
+    <input typeOnChange={handleChange} onFocus={handleFocus}>
         <section className="relative flex-row flex-col max-container">
-            <div className="flext-1 min-w -[50%] flex-col"></div>
-            <h1 className="head-text">Keep In Touch</h1>
-            <form >onsubmit={handleSubmit}</form>
-            <form className="w-full flex flex-col gap-8 mt-15"></form>
-            <label className="text-black 500 font-semibold"></label>
+            <div className="flex-1 min-w -[50%] flex-col">
+            <h3 className="head-text">Keep In Touch</h3>
+            <form className="w-full flex flex-col gap-8 mt-15" onsubmit={handleSubmit}>
+            <label className="text-black 500 font-semibold">
+              Contact Number
+            </label>
+            <input></input>
+            
+            </form>
             <button
               type="submit"
               className='btn'
-              onFocus={HandleFocus}
+              onFocus={handleFocus}
               disabled={isLoading}
+            >
               {isLoading ? 'Sending Data':'Send Acceptance'}
-            ></button>
+            </button>
+            </div>
         </section>
         </input>
   )

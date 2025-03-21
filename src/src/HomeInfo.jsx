@@ -1,6 +1,10 @@
 import React, { useLayoutEffect } from 'react'
-//Home Info Funct 
-function HomeInfo() {
+
+function HomeInfo() {//Home Info Funct 
+  const [name,SetName]=useState(" ");//name val declare
+  const [age,Setage]=useState(" ");//age val declare
+  const [gender,Setgender]=useState(" ");//gender val declare
+  const [P roffession,SetProffession]=useState(" ");//Proffession val declare
   const val=0;
   useLayoutEffect(()={
    console.Log("Home Info Val",val); 

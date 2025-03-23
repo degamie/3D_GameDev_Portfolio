@@ -26,6 +26,9 @@ function Contact() {
     e.preventDefault();
     sendForm(this.state.form);
 }
+const onsubmitUsername(UserName:String){//  Func declare
+  const formsubmit=handleSubmit(e);//Calling handleSubmit method
+}
 
   const handleChange=(e)=>{//HandleChange Funct Declare
     setForm({

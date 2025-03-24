@@ -22,13 +22,24 @@ function Contact() {
     const formElement=form.elements as typeof form.element & {
         usernameInput.{value:string};
    
-}onsubmitUsername(formElements.usernameInput.value);
-    e.preventDefault();
-    sendForm(this.state.form);
 }
 const onsubmitUsername(UserName:String){//  Func declare
   const formsubmit=handleSubmit(e);//Calling handleSubmit method
 }
+//Password Submit Button
+onsubmitPassword(PasswordInput.value);
+    e.preventDefault();
+    sendForm(this.state.form);
+}//Handling The Password Form's btn
+const onsubmitPassword(var Password){//  Func declare
+  const formsubmit=handleSubmit(e);//Calling handleSubmit method
+}
+
+onsubmitUsername(formElements.usernameInput.value);
+    e.preventDefault();
+    sendForm(this.state.form);
+}
+
 
   const handleChange=(e)=>{//HandleChange Funct Declare
     setForm({

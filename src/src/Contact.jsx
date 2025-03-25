@@ -11,8 +11,10 @@ function Contact() {
   // const emailjs = useState('')
 
   const sendForm = (form) => {
-    // api call here
-    // api call body = form
+    handleSubmit(e);
+    onsubmitPassword(Password);
+    onsubmitUsername(UserName);
+
   }
 
   const handleFocus=()=>{};
@@ -38,7 +40,7 @@ const onsubmitPassword(var Password){//  Func declare
 onsubmitUsername(formElements.usernameInput.value);
     e.preventDefault();
     sendForm(this.state.form);
-}
+
 
 
   const handleChange=(e)=>{//HandleChange Funct Declare

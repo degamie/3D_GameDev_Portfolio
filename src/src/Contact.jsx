@@ -17,7 +17,10 @@ function Contact() {
 
   }
 
-  const handleFocus=()=>{};
+  const handleFocus=()=>{
+    sendForm(e);
+    handleSubmit(e);
+  };
 
   const handleSubmit = (e) =>{
     const form=event.currentTarget;

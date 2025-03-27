@@ -1,10 +1,10 @@
 import React, { useLayoutEffect } from 'react'
-
-function HomeInfo() {//Home Info Funct 
+class HomeInfo extends Home{
+  function HomeInfo()  {//Home Info Funct 
   const [name,SetName]=useState(" ");//name val declare
   const [age,Setage]=useState(" ");//age val declare
   const [gender,Setgender]=useState(" ");//gender val declare
-  const [P roffession,SetProffession]=useState(" ");//Proffession val declare
+  const [Proffession,SetProffession]=useState(" ");//Proffession val declare
   const val=0;
   useLayoutEffect(()={
    console.Log("Home Info Val",val); 
@@ -28,9 +28,12 @@ function HomeInfo() {//Home Info Funct
     )
 
   }
+}
   return (
     <div>GameDev HomeInfo</div>
   )
+    
 }
+
 
 export default HomeInfo

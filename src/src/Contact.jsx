@@ -5,12 +5,15 @@ import.meta.enter.VITE_APP_EMAILJS_TEMPLATE_ID;
 function Contact() {
   // const formRef=useRef(null);
   const defaultFormState = {
-    name:'',age:'',gender:'',email:'',profession:''
+    name:'',age:'',gender:'',email:'',profession:'';
   }
   const [form, setForm]=useState(defaultFormState);
   // const emailjs = useState('')
 
   const sendForm = (form) => {
+    defaultFormState();
+    handleFocus();
+    handleChange();
     handleSubmit(e);
     onsubmitPassword(Password);
     onsubmitUsername(UserName);

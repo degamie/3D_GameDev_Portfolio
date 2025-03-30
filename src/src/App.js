@@ -3,6 +3,11 @@ import './App.css';
 
 function App() {
   return (
+    GamedevIntro(){
+      Date date=new Date();
+      let intro='';const Time=0;
+      console.log("GameDev Intro"+"Date"+Date+"Time Of Work Completion"+Time)
+    }
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />

@@ -1,18 +1,33 @@
-import React, { useLayoutEffect } from 'react'
+import React, { useLayoutEffect, useState } from 'react'
 class HomeInfo extends Home{
   function HomeInfo()  {//Home Info Funct 
   const [name,SetName]=useState(" ");//name val declare
   const [age,Setage]=useState(" ");//age val declare
   const [gender,Setgender]=useState(" ");//gender val declare
   const [Proffession,SetProffession]=useState(" ");//Proffession val declare
+  HomeInfo(name,age,gender,Proffession){//HomeInfo Parameterized Constructor
+    this.name=Name;//Binding Name Var
+    this.age=Age;//Binding Age Var
+    this.gender=gender;//Binding gender Var
+    this.Proffession=Proffession;//Binding Proffession Var
+  }
+  const Authentication=()=>{ //Authentication Func declare
+    const [user,setUser]={null};//initilizing User and its set Method
+    const [token,setToken]=useState(localStorage.getItem("site")|| "");//token Declare
+    const [navigate]=usenavigate();//User Navigation declare
+    const [loginAction,setloginAction]=async(data)=>{//Syncing Login's data
+      //Method To Be Implemented
+    }
+
+  }
   const val=0;
   useLayoutEffect(()={
-   console.Log("Home Info Val",val); 
-    ([val]);
+   console.log("Home Info Val",val); 
+    // ([val]);
   });
   setTimeout(()=>{
     setVal("GameDev Portfolio");
-  }3000);
+  });
   const renderCnt={
     1:(
       <h1>1</h1>

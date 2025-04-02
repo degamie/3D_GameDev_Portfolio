@@ -29,27 +29,31 @@ function Contact() {
     const form=event.currentTarget;
     const formElement=form.elements as typeof form.element & {
         usernameInput.{value:string};
-   
+      }
 }
 const onsubmitUsername(UserName:String){//  Func declare
+  onsubmitUsername(formElements.usernameInput.value);
   const formsubmit=handleSubmit(e);//Calling handleSubmit method
-}
+
 //Password Submit Button
-onsubmitPassword(PasswordInput.value);
+
     e.preventDefault();
     sendForm(this.state.form);
-}//Handling The Password Form's btn
+  }
+//Handling The Password Form's btn
 const onsubmitPassword(var Password){//  Func declare
+  onsubmitPassword(PasswordInput.value);
   const formsubmit=handleSubmit(e);//Calling handleSubmit method
 }
 
-onsubmitUsername(formElements.usernameInput.value);
+
     e.preventDefault();
     sendForm(this.state.form);
 
 
 
   const handleChange=(e)=>{//HandleChange Funct Declare
+    handleSubmit(e);
     setForm({
       ...this.state.form,
       [e.target.name]:e.target.value

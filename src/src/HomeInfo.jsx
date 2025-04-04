@@ -18,6 +18,12 @@ class HomeInfo extends Home{
     const [loginAction,setloginAction]=async(data)=>{//Syncing Login's data
       //Method To Be Implemented
     }
+    const LoginAuthentication=()=>{//LoginAuthentication func declare
+      Authentication();//Calling Authentication func decalre
+      if(user===null)return null;//base cOnd
+      else if(token>=)token++;//Incr token
+      return token;//printing token
+    }
 
   }
   const val=0;

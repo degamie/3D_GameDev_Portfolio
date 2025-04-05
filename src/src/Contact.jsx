@@ -2,6 +2,7 @@ import React, { useRef, useState } from 'react'
 import.meta.enter.VITE_APP_EMAILJS_SERVICE_ID;
 import.meta.enter.VITE_APP_EMAILJS_TEMPLATE_ID;
 
+class Contact extends HomeInfo{
 function Contact() {
   // const formRef=useRef(null);
   const defaultFormState = {
@@ -44,12 +45,9 @@ const onsubmitUsername(UserName:String){//  Func declare
 const onsubmitPassword(var Password){//  Func declare
   onsubmitPassword(PasswordInput.value);
   const formsubmit=handleSubmit(e);//Calling handleSubmit method
-}
-
-
     e.preventDefault();
     sendForm(this.state.form);
-
+  }
 
 
   const handleChange=(e)=>{//HandleChange Funct Declare
@@ -84,5 +82,5 @@ const onsubmitPassword(var Password){//  Func declare
         </input>
   )
 }
-
+}
 export default Contact

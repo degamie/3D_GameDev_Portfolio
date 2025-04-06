@@ -11,6 +11,16 @@ class HomeInfo extends Home{
     this.gender=gender;//Binding gender Var
     this.Proffession=Proffession;//Binding Proffession Var
   }
+  const express=require('express');
+  const cors=require('cors');
+  const app=express();
+  app.use(cors());
+  app.use('/login',(req,res{
+    res.send({
+      token:'portfolio99668';
+    });
+  }));
+
   const Authentication=()=>{ //Authentication Func declare
     const [user,setUser]={null};//initilizing User and its set Method
     const [token,setToken]=useState(localStorage.getItem("site")|| "");//token Declare

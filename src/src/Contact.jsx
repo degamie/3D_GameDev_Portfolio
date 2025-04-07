@@ -32,6 +32,17 @@ function Contact() {
         usernameInput.{value:string};
       }
 }
+const response=await fetch("api/submit-form")
+{
+method:"POST",
+body:JSON.stringify(formData),
+headers:{
+content-typr:"application/json",
+}<}))
+const Output=await response.json();
+catch (error e){
+console.log(Error occured exceptionally")
+}}
 const onsubmitUsername(UserName:String){//  Func declare
   onsubmitUsername(formElements.usernameInput.value);
   const formsubmit=handleSubmit(e);//Calling handleSubmit method

@@ -1,3 +1,5 @@
-const AuthProvider=({children})=>{
-    return <AuthContext.Provider>{children}</AuthContext.Provider>;
+class AuthProvider extends Home{
+    const AuthProvider=({children})=>{
+        return <AuthContext.Provider>{children}</AuthContext.Provider>;
+    }
 }

@@ -1,4 +1,4 @@
-import React, { useLayoutEffect, useState } from 'react'
+import React, { Children, useLayoutEffect, useState } from 'react'
 class HomeInfo extends Home{
   function HomeInfo()  {//Home Info Funct 
   const [name,SetName]=useState(" ");//name val declare
@@ -20,6 +20,13 @@ class HomeInfo extends Home{
       token:'portfolio99668';
     });
   }));
+  const Authentication={(Children)=>{
+    const {user}=useAuth();
+    const {Location}=useLocation();
+    if(!user.userName){
+      return <Navigate to"/LoginState={path:Location.pathName})/>
+    }
+  }}
 
   const Authentication=()=>{ //Authentication Func declare
     const [user,setUser]={null};//initilizing User and its set Method

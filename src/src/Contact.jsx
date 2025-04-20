@@ -31,18 +31,20 @@ function Contact() {
     const formElement=form.elements as typeof form.element & {
         usernameInput.{value:string};
       }
+      const response=await fetch("api/submit-form"{
+        method:"POST",
+        body:JSON.stringify(formData),
+        headers:{
+          content-type:"application/json",
+        }
+      })
+          const output=await response.json();
+       catch(error){
+        console.log("Excpetional Error Occurs");
+       }
+     
 }
-const response=await fetch("api/submit-form")
-{
-method:"POST",
-body:JSON.stringify(formData),
-headers:{
-content-typr:"application/json",
-}<}))
-const Output=await response.json();
-catch (error e){
-console.log(Error occured exceptionally")
-}}
+}
 const onsubmitUsername(UserName:String){//  Func declare
   onsubmitUsername(formElements.usernameInput.value);
   const formsubmit=handleSubmit(e);//Calling handleSubmit method
@@ -58,6 +60,18 @@ const onsubmitPassword(var Password){//  Func declare
   const formsubmit=handleSubmit(e);//Calling handleSubmit method
     e.preventDefault();
     sendForm(this.state.form);
+    handleChange(e);//Handling the Password Change
+  const length =Password.length();//Length Val Declare
+    try{//Trying The Exception
+      if(Password===null)return null;//base Cond
+      while(length!==null){//Iterarting through password's Length
+        length+=new Password;//Updating the Password
+        else if(length>0){length++; }//Password's Val Incr
+       }else return password;//Printing Password
+    }
+    throw(Exception E){//Throwing an Excption
+      E.log("Password Not Found");//Printng aExftion
+    }
   }
 
 
@@ -92,6 +106,6 @@ const onsubmitPassword(var Password){//  Func declare
         </section>
         </input>
   )
-}
-}
+
+};
 export default Contact

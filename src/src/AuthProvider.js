@@ -15,7 +15,10 @@ class AuthProvider extends Home{
                         const {attributes:userAttr}=user;
                         userAttributes=userAttr;
                     }
+                    //Allowing User Access Permissions
+                    const isAllowed=Permissions.some(allowed)=>userPermission.include((allowed));
                 }
+
             })
 
         }

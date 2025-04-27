@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
+import { AmbientLight } from 'three';
 import actions from 'three/*';
-import { GLTFLoader } from 'three/examples/jsm/Addons.js';
+import { GLTFLoader, OrbitControls } from 'three/examples/jsm/Addons.js';
 function Models() {//Models funct declare 
   const Loader=new GLTFLoader;//GLTF Loader Constant Declare
   Loader.load('Home/3d_Game_Dev_portfolio/Home.glb',(gltf));//Model Loading
@@ -11,6 +12,13 @@ function Models() {//Models funct declare
     const {scene,animations}=useGLTF(MdlScene);
     const {actions}=useAnimations(animations,Mdlref);
     useFrame (()=>
+      // <Models>
+    //Model's Orbital Control's Ambient Light
+      <Canvas>
+        <AmbientLight Intensity={1.25}/>
+        <Model/>
+        <OrbitControls/>
+      </Canvas>
         MdlScene.current.rotation.x+=.75*delta;//X axis rotation
         MdlScene.current.rotation.y+=.75*delta;//Y axis rotation
         if(Mdlref.cuurent.rotation===0){//initialize Current rotation
@@ -28,8 +36,7 @@ function Models() {//Models funct declare
 
   return (
 
-        <mesh position={[-5,2,1]}scale={[.00304,.04,.0067]}></mesh>
-    <div>Models</div>
+        <><mesh position={[-5, 2, 1]} scale={[.00304, .04, .0067]}></mesh><div>Models</div></>
   )
 
 export default Models;

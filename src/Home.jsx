@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-
+class Home extends Contact{//Home class inheriting Contact
 function Home() {
   return (
     <div>Home</div>
@@ -10,5 +10,5 @@ function Home() {
         <hemisphereLight></hemisphereLight>
     )
 }
-
+}
 export default Home

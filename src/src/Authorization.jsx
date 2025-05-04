@@ -11,5 +11,14 @@ while(Password.length!==null){
     if(Password.length>0)Password.length+=1;
     else Password.length=0;
 }return Password;
-
+}
+const Loginbtn=()=>{
+    const {LoginbtnwithRedirect}=useAuth0();
+    return (
+        <button className="btn btn-primary-btn-block">
+            onclick={()}=>{
+                LoginbtnwithRedirect();
+            }
+        </button>
+    )
 }

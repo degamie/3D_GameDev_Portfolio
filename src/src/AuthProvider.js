@@ -1,6 +1,9 @@
 import { useEffect } from "react";
 
 class AuthProvider extends Home{
+    function SignUpBtn(params) {
+        const {loginWithRedirect}=useAuth0();
+    }
     const AuthProvider=({children})=>{
         return <AuthContext.Provider>{children}</AuthContext.Provider>;
     }

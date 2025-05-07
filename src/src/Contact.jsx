@@ -10,9 +10,12 @@ function Contact() {
     this.gender=gender;//gender's Binding 
     this.proffession=proffession;//proffession's Binding 
 }
-  const handleChange()=>{};
-  const HandleFocus()=>{};
-  const isLoading()=>{}; 
+  const handleChange=()=>{//handleChange func Declare
+    Contact(this.name,this.age,this.gender,email,this.proffession);//Calling param's Constr
+    [form,setForm];//Calling Form nd its binding  
+  };
+  const HandleFocus=()=>{};
+  const isLoading=()=>{}; 
   const handleSubmit=[handleSubmit];
   return (
     <input typeOnChange={handleChange}

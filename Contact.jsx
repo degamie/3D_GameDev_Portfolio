@@ -44,6 +44,7 @@ function Contact() {
        }
      
 }
+}
 const onsubmitUsername(UserName:String){//  Func declare
   onsubmitUsername(formElements.usernameInput.value);
   const formsubmit=handleSubmit(e);//Calling handleSubmit method
@@ -60,6 +61,17 @@ const onsubmitPassword(var Password){//  Func declare
     e.preventDefault();
     sendForm(this.state.form);
     handleChange(e);//Handling the Password Change
+  const length =Password.length();//Length Val Declare
+    try{//Trying The Exception
+      if(Password===null)return null;//base Cond
+      while(length!==null){//Iterarting through password's Length
+        length+=new Password;//Updating the Password
+        else if(length>0){length++; }//Password's Val Incr
+       }else return password;//Printing Password
+    }
+    throw(Exception E){//Throwing an Excption
+      E.log("Password Not Found");//Printng aExftion
+    }
   }
 
 
@@ -94,6 +106,6 @@ const onsubmitPassword(var Password){//  Func declare
         </section>
         </input>
   )
-}
-}
+
+};
 export default Contact

@@ -1,7 +1,11 @@
+
 import React, { Suspense, useState } from 'react'
 import HomeInfo from "./assets/3d/PLANE.glb/HomeInfo";
 class Home extends HomeInfo,AuthProvider{
 function LoginButton(){//Login button Declare//Funct
+  const getToken(newtoken){
+    console.log(newtoken);
+  }
   const setToken(newToken){
     setToken(newToken);
   }
@@ -25,8 +29,7 @@ function Home() {
     setCurrentStage={setCurrentStage};
   }
   return (    
-    <Plane planeScale={planeScale,planePosition}rotation={0,20,0}></Plane>
-    <div>{currentStage===1 && <HomeInfo currentStage=currentStage/></div>
+    <><Plane planeScale={planeScale, planePosition} rotation={0, 20, 0}></Plane><div>{currentStage === 1 && <HomeInfo currentStage currentStage />}</div></>
   
   )
 }

@@ -11,6 +11,16 @@ while(Password.length!==null){
     if(Password.length>0)Password.length+=1;
     else Password.length=0;
 }return Password;
+function Login(username,Password){
+    if(username.length===null && Password.length===null)return 0;
+    while(username.length!==null && Password.length!==null){
+        if(username.length>0 && Password.length>0){
+            username.length+=1;
+            Password.length+=1;
+        }
+        else username.length=0;Password.length=0;
+    }return username.length+Password.length;
+}
 function Logout(const isAllowed,var userPermission,var Password,var username){//Logout funct declare
     var len=username.length;//Username's Length Declare
     var len1=Password.length;//Password's Length Declare

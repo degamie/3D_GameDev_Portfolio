@@ -1,6 +1,14 @@
 import { useEffect } from "react";
 
 class AuthProvider extends Home{
+    var user=0;//User Var Declare
+    AuthProvider(var user){//param Const declare
+        this.user=user;//binding User 
+    }
+    async getIdentity(username){
+    username=localStorage.getItem('username');
+    return {id:username,fullName:username};
+}
     function SignUpBtn(params) {
         const {loginWithRedirect}=useAuth0();
     }
@@ -21,9 +29,7 @@ class AuthProvider extends Home{
                     //Allowing User Access Permissions
                     const isAllowed=Permissions.some(allowed)=>userPermission.include((allowed));
                 }
-
             })
-
         }
 
 }

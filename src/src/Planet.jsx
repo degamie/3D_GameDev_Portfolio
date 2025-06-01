@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react"
-
-const Planet({isRotating ,setIsRotating,...obj})=>{//Planet Constructor Declare
+class planet{
+Planet(isRotating ,setIsRotating,obj){//Planet Constructor Declare
   const {scene,animations}=useGLTF(isPlanetScene);//SceneAnimation
   const PlanetRef=useRef();//PlanetRef Declare
   var lastX=useRef(0);
@@ -9,6 +9,7 @@ const Planet({isRotating ,setIsRotating,...obj})=>{//Planet Constructor Declare
   const isPlanetRef=useRef();
   const gl,viewPort=useThree();
   const nodes,materials=useGLTF(isPlanetScene);
+}
   //Implemnenting
   
   UseFrame=()=>{
@@ -25,21 +26,18 @@ const Planet({isRotating ,setIsRotating,...obj})=>{//Planet Constructor Declare
     }
   }
   const handlingPt=(e)=>{
-    useEffect () =>{
-      const Canvas=gl.domElement;
+    useEffect (Canvas){
+      Canvas=gl.domElement;
       document.addEventListener("handleKeyUP");
 
       document.addEventListener("handlePtrUp]"); document.addEventListener("handlePtrDown");document.addEventListener("handlePtrMove");} 
     
     return () =>{
-      <meshRef={PlanetRef};
+      <meshRef>{PlanetRef}</meshRef>
       document.removeEventListener("PointerUp");
       document.removeEventListener("PointerDown");
       document.removeEventListener("PointerMove");
     }
-  // const useEffect(() => {
-  
-  // }, [input])
 const handleKeyUP=(e)=>{
   if(e.Key==='ArrowLeft' || e.Key==='ArrowRight'){
     setIsRotating(false);
@@ -50,9 +48,6 @@ const handlingPtUp=(e)=>{
   e.PreventDefault();
   setIsRotating(false);
  }
-
-
-
     e.stopPropogation();
     e.PreventDefault();
     setIsRotating(true);
@@ -62,5 +57,5 @@ const handlingPtUp=(e)=>{
     const delta=clientX-lastCurrent/viewPort.width;
     isPlanetRef.current.rotating+=delta*.95;
     lastX.current*Math.PI.clientX;
-   }
-  };
+}
+}

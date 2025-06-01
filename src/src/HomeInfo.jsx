@@ -1,35 +1,37 @@
 import React, { Children, useLayoutEffect, useState } from 'react'
 class HomeInfo extends Home{
-  function HomeInfo()  {//Home Info Funct 
+  HomeInfo(name,age,gender,Proffession)  {//Home Info Funct 
   const [name,SetName]=useState(" ");//name val declare
   const [age,Setage]=useState(" ");//age val declare
   const [gender,Setgender]=useState(" ");//gender val declare
-  const [Proffession,SetProffession]=useState(" ");//Proffession val declare
+  const [Proffession,SetProfession]=useState(" ");//Proffession val declare
+  }
   HomeInfo(name,age,gender,Proffession){//HomeInfo Parameterized Constructor
     this.name=Name;//Binding Name Var
     this.age=Age;//Binding Age Var
     this.gender=gender;//Binding gender Var
     this.Proffession=Proffession;//Binding Proffession Var
   }
-  const express=require('express');
-  const cors=require('cors');
-  const app=express();
+  express=require('express');
+  cors=require('cors');
+  app=express();
   app.use(cors());
   app.use('/login',(req,res{
     res.send({
       token:'portfolio99668';
     });
   }));
-  const Authentication={(Children)=>{
+   Authentication=(user,Location)=>{
     const {user}=useAuth();
     const {Location}=useLocation();
     if(!user.userName){
-      return <Navigate to"/LoginState={path:Location.pathName})/>
+      return <Navigate >"LoginState={Location.pathName}"</Navigate>
     }
   }}
 
-  const Authentication=()=>{ //Authentication Func declare
-    const [user,setUser]={null};//initilizing User and its set Method
+  const Authentication=(token)=>{ //Authentication Func declare
+    const [user,setUser]={};//initilizing User and its set Method
+    const[token,getToken]=useState(localStorage.setItem("Token Binding") && "");//Fetching Binded Token within localstorage
     const [token,setToken]=useState(localStorage.getItem("site")|| "");//token Declare
     const [navigate]=usenavigate();//User Navigation declare
     const [loginAction,setloginAction]=async(data)=>{//Syncing Login's data
@@ -38,15 +40,14 @@ class HomeInfo extends Home{
     const LoginAuthentication=()=>{//LoginAuthentication func declare
       Authentication();//Calling Authentication func decalre
       if(user===null)return null;//base cOnd
-      else if(token>=)token++;//Incr token
+      else if(token>=0)token++;//Incr token
       return token;//printing token
     }
 
   }
   const val=0;
-  useLayoutEffect(()={
+  useLayoutEffect((val)={
    console.log("Home Info Val",val); 
-    // ([val]);
   });
   setTimeout(()=>{
     setVal("GameDev Portfolio");
@@ -66,12 +67,8 @@ class HomeInfo extends Home{
     )
 
   }
-}
   return (
     <div>GameDev HomeInfo</div>
   )
-    
-}
-
-
-export default HomeInfo
+  }
+export default HomeInfo;

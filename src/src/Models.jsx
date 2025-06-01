@@ -28,9 +28,9 @@ function Models() {//Models funct declare
         }
         if(Mdlref.curent.position.x>Mdlref.curent.position.x+10){Mdlref.curent.position.y=Math.PI;}//Y Axis Rotational position declare
         else if(Mdlref.cuurent.position.x>Mdlref.cuurent.position.x-10){MdlRef.current.rotation.y=0;}//intitilize Y axis pos 
-  )
+  );
 }
-    useEffect()=>{
+    useEffect=()=>{
         actions(['Take 001'].play(),[]);
    }
 

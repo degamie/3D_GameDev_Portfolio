@@ -1,6 +1,6 @@
 import React from 'react'
 class Navbar extends AuthProvider{
-export const Navbar=()=>{
+Navbar=()=>{
     const {user}=useAuth();
 }
 }

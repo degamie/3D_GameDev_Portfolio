@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
-class AuthProvider extends Home{
+class AuthProvider extends Home{// Class's Declare
+    AuthProvider AuthProvider=new AuthProvider();//obj Declare
     var user=0;//User Var Declare
     AuthProvider(var user){//param Const declare
         this.user=user;//binding User 

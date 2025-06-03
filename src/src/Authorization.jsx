@@ -1,3 +1,5 @@
+class Authorization extends AuthProvider{
+    public Authorization authorization;
 function Authorization{
     const {user}=useAuth();
 const {location}=uselocation();
@@ -10,7 +12,7 @@ else if(user.Password){
     Boolean isPassword=userpermission.includes((allowed));
     isPassword=Password;
     return Password;
-}
+}}
 var Password=null;
 if(Password.length===null)return null;
 while(Password.length!==null){

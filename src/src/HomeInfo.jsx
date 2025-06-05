@@ -1,5 +1,6 @@
 import React, { Children, useLayoutEffect, useState } from 'react'
-class HomeInfo extends Home{
+class HomeInfo extends Home{//HomeInfo's Class  Declare 
+  HomeInfo homeinfo=new HomeInfo();//HomeInfo's Obj Declare
   HomeInfo(name,age,gender,Proffession)  {//Home Info Funct 
   const [name,SetName]=useState(" ");//name val declare
   const [age,Setage]=useState(" ");//age val declare

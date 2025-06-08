@@ -3,6 +3,7 @@ import.meta.enter.VITE_APP_EMAILJS_SERVICE_ID;
 import.meta.enter.VITE_APP_EMAILJS_TEMPLATE_ID;
 
 class Contact extends HomeInfo{
+  public Contact contact=new Contact();
 Contact() {
   // const formRef=useRef(null);
   const defaultFormState = {

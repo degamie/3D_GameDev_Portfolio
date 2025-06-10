@@ -1,5 +1,6 @@
 import { useEffect, useRef } from "react"
-class planet{
+class Planet{
+public Planet planet=new Planet();
 Planet(isRotating ,setIsRotating,obj){//Planet Constructor Declare
   const {scene,animations}=useGLTF(isPlanetScene);//SceneAnimation
   const PlanetRef=useRef();//PlanetRef Declare

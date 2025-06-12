@@ -1,23 +1,12 @@
-import React from 'react';
-import {useEffect, useRef} from 'react';
-
-
-const Plane=(isRotating,props)=>{
-  const ref=React.useRef;
-  const {actions}=useAnimations(Animation,ref);
-  useEffect(()=>{
-    if(isRotating)actions['Take 001'].play();
-    else actions['Take 001'].stop();
-    console.log({isRotating});
-  })
-  return;
+import Plane from '../assets/3d/plane.glb';
+class Plane{
+let xpos=0;
+let ypos=0;
+Plane(xpos,ypos){
+    this.xpos=xpos;
+    this.ypos=ypos;
 }
-export default Plane;
-    // <mesh {props} ref={ref}></mesh>
-    // <div>Plane</div>
-
-
-// import Plane from '../assets/3d/plane.glb';
-// const Plane=()=>{
-//     const{scene,animations}=useGLTF(planescene);
-// }
+const Plane=()=>{
+    const{scene,animations}=useGLTF(planescene);
+}
+}

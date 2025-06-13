@@ -10,6 +10,10 @@ class AuthProvider extends Home{// Class's Declare
     username=localStorage.getItem('username');
     return {id:username,fullName:username};
 }
+setIdentity(username){
+    username=localStorage.setItem('username');
+    return {id:username};
+}
     function SignUpBtn(params) {
         const {loginWithRedirect}=useAuth0();
     }

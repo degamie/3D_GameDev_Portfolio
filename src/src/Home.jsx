@@ -24,9 +24,12 @@ function Header(){//Header Funct declare
   }
 }
 
-function Home() {
-  Plane=()=>{
+function Home() { //Home  Funct Declare
+  Plane=(currentStage)=>{ //Plane Funct Declare
+    //Fethcing the Current Stage
+    const [currentStage,getCurrentStage]=useState(0);getCurrentStage={getCurrentStage};
     const [currentStage,setCurrentStage]=useState(1);
+
     setCurrentStage={setCurrentStage};
   }
   return (    

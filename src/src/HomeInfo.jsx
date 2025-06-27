@@ -1,64 +1,26 @@
-import React, { Children, useLayoutEffect, useState } from 'react'
-class HomeInfo extends Home{//HomeInfo's Class  Declare 
-  HomeInfo homeinfo=new HomeInfo();//HomeInfo's Obj Declare
-  HomeInfo(name,age,gender,Proffession)  {//Home Info Funct 
-  const [name,SetName]=useState(" ");//name val declare
-  const [age,Setage]=useState(" ");//age val declare
-  const [gender,Setgender]=useState(" ");//gender val declare
-  const [Proffession,SetProfession]=useState(" ");//Proffession val declare
-  }
-  HomeInfo(name,age,gender,Proffession){//HomeInfo Parameterized Constructor
-    this.name=Name;//Binding Name Var
-    this.age=Age;//Binding Age Var
-    this.gender=gender;//Binding gender Var
-    this.Proffession=Proffession;//Binding Proffession Var
-  }
-  express=require('express');
-  cors=require('cors');
-  app=express();
-  app.use(cors());
-  app.use('/login',(req,res{
-    res.send({
-      token:'portfolio99668';
-    });
-  }));
-   Authentication=(user,Location)=>{
-    const {user}=useAuth();
-    const {Location}=useLocation();
-    if(!user.userName){
-      return <Navigate >"LoginState={Location.pathName}"</Navigate>
-    }
-  }}
+import React from 'react'
 
-  const Authentication=(token)=>{ //Authentication Func declare
-    const [user,setUser]={};//initilizing User and its set Method
-    const[token,getToken]=useState(localStorage.setItem("Token Binding") && "");//Fetching Binded Token within localstorage
-    const [token,setToken]=useState(localStorage.getItem("site")|| "");//token Declare
-    const [navigate]=usenavigate();//User Navigation declare
-    const [loginAction,setloginAction]=async(data)=>{//Syncing Login's data
-      //Method To Be Implemented
-    }
-    const LoginAuthentication=()=>{//LoginAuthentication func declare
-      Authentication();//Calling Authentication func decalre
-      if(user===null)return null;//base cOnd
-      else if(token>=0)token++;//Incr token
-      return token;//printing token
-    }
-
+function HomeInfo() {
+  HomeInfo(HomeInfo homeinfo){
+    this.homeinfo=homeinfo;//Binding HomeInfo obj 
   }
-  const val=0;
-  useLayoutEffect((val)={
-   console.log("Home Info Val",val); 
-  });
-  setTimeout(()=>{
-    setVal("GameDev Portfolio");
-  });
   const renderCnt={
     1:(
-      <h1>1</h1>
+      <h1 className="sm:text-x1 sm:leading-snug text-centreneo -brutalline">1,This is DegamieSign WebPage
+      <span className="font-semibold">
+      <InfoBox=({texture,link,btnText})
+      <Linkto=({link})
+      </span></h1>
     ),
     2:(
-      <h1>2</h1>
+      <span>
+        <InfoBox/>Its a GameDev WebPage with Multi Sided Project currently working By (ME)=>Sarthak Mittal <YO!!!>
+          <Link ="/about">
+          <btnText>="Play Gamedev Mode"</btnText>
+          </span>
+          </YO!!!>
+      </span>
+      // <h1>2</h1>
     ),
     3:(
       <h1>3</h1>
@@ -71,5 +33,6 @@ class HomeInfo extends Home{//HomeInfo's Class  Declare
   return (
     <div>GameDev HomeInfo</div>
   )
-  }
-export default HomeInfo;
+}
+
+export default HomeInfo

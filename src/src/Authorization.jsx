@@ -1,18 +1,12 @@
-class Authorization extends AuthProvider{
-    public Authorization authorization;
-function Authorization{
+class Authorization{
+    Authorization authorization=new Authorization();
+   function Authorization{
     const {user}=useAuth();
 const {location}=uselocation();
 if(user.usernane){
     userpermission=user.userpermission;
     Boolean isAllowed=Permissions.some(allowed)=>userpermission.includes((allowed));
 }
-else if(user.Password){
-    userPermission=user.userPermission;
-    Boolean isPassword=userpermission.includes((allowed));
-    isPassword=Password;
-    return Password;
-}}
 var Password=null;
 if(Password.length===null)return null;
 while(Password.length!==null){
@@ -49,5 +43,6 @@ const Loginbtn=()=>{
             }
         </button>
     )
+} ;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ]
 }
 }
